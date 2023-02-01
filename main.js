@@ -1,16 +1,15 @@
 $(document).ready(function(){
-    $("#images").slick({
-        autoplay: true,
-    });
-
-    $(".menu").click(function(){
-        $("nav").slideToggle()
-    })
-
-    // let mascara if (celular) ? (00) 00000-0000 : xxxxxx
 
     $("#tel").mask("(00) 00000-0000", {
         placeholder: "(00) 00000-0000",
+    })
+
+    $("#cpf").mask("000.000.000-00", {
+        placeholder: "000.000.000-00",
+    })
+
+    $("#cep").mask("00000-000", {
+        placeholder: "00000-000",
     })
 
     $("form").validate({
@@ -25,12 +24,23 @@ $(document).ready(function(){
             tel:{
                 required: true
             },
-            intere:{
+            cpf:{
+                required: true
+            },
+            endere:{
+                required: true
+            },
+            cep:{
                 required: true
             },
         },
         messages:{
-            name: "Este campo é obrigatório."
+            name: "Este campo é obrigatório.",
+            email: "Este campo é obrigatório.",
+            tel: "Este campo é obrigatório.",
+            cpf: "Este campo é obrigatório.",
+            endere: "Este campo é obrigatório.",
+            cep: "Este campo é obrigatório.",
         },
         submitHandler: function(form){
             console.log(form)
@@ -44,13 +54,9 @@ $(document).ready(function(){
         }
     })
 
-    $(".items-list button").click(function(){
-        const name =  $(this).parent().find("h3").text()
-        const destino = $("#contact")
-        $("#intere").val(name)
-        $("html").animate({
-            scrollTop: destino.offset().top,
-        }, 1000)
+    $("form").on("submit", function(e){
+        e.preventDefault();
+        $('form').trigger("reset");
     })
 
 });

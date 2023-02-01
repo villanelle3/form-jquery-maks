@@ -15,70 +15,15 @@ html{
     box-sizing: border-box;
     font-family: 'Roboto', sans-serif;
 }
-
+.error {
+    color: #F00;
+}
 .container{
     max-width: 1024px;
     width: 100%;
     margin: 0 auto;
 }
 
-header{
-    background-color: var(--shade4);
-    padding-top: 16px;
-    color: #fff;
-    position:sticky;
-    top: 0;
-    left:0;
-}
-
-header > .container{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding-bottom: 16px;
-}
-
-nav{
-    background-color: var(--shade3);
-    padding: 16px 0;
-    display: none;
-}
-
-nav li{
-    list-style: none;
-    display: inline;
-    margin-right: 16px;
-    font-size:18px;
-    font-weight: bold;
-    text-transform: uppercase;
-}
-
-li a{
-    text-decoration: none;
-    color: white;
-}
-
-.menu{
-    width: 32px;
-    cursor: pointer;
-}
-
-.menu span{
-    height: 2px;
-    width: 100%;
-    background-color: #fff;
-    display: block;
-    margin-bottom: 4px;
-}
-
-.container-flex{
-    display: flex;
-}
-
-#about img{
-    max-width: 400px;
-    margin-right: 24px;
-}
 
 section{
     padding: 48px 0;
@@ -86,32 +31,6 @@ section{
 
 section h2{
     padding-bottom: 16px;
-}
-
-.items-list{
-    flex-wrap: wrap;
-}
-
-.items-list li{
-    list-style-type: none;
-    max-width: 30%;
-    margin-bottom: 24px;
-}
-
-.items-list img{
-    max-width: 100%;
-}
-
-.items-list li h3{
-    margin: 16px 0;
-}
-
-.item-central{
-    margin: 0 5%;
-}
-
-.items-list li p{
-    padding-bottom: 10px;
 }
 
 button{
@@ -159,31 +78,6 @@ button:hover{
     height: 120px;
 }
 
-form{
-    max-width: 360px;
-}
-
 form button{
     max-width: 120px;
-}
-
-footer{
-    background-color: var(--shade4);
-    color:white;
-}
-footer ul{
-    display: flex;
-}
-footer li{
-    list-style-type: none;
-    margin-left: 16px;
-}
-
-footer li img{
-    height: 32px;
-}
-
-footer .container{
-    justify-content: space-between;
-    align-items: center;
 }
